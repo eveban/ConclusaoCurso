@@ -1,0 +1,20 @@
+.ui-icon.Salvar{
+    background-image: url(save.png) !important;
+    margin-right: 4px;
+    padding: 10px;
+}
+.ui-icon.Consultar{
+    background-image: url(search.png) !important;
+    margin-right: 4px;
+    padding: 10px;
+}
+.ui-icon.Adicionar{
+    background-image: url(add.png) !important;
+    margin-right: 4px;
+    padding: 10px;
+}
+.ui-icon.Selecionar{
+    background-image: url(check.png) !important;
+    margin-right: 4px;
+    padding: 10px;
+}

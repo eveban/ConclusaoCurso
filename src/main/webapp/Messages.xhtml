@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/Template.xhtml">
+            <ui:define name="titulo">
+                Messages
+            </ui:define>
+            <ui:define name="subtitulo">
+
+            </ui:define>
+            <ui:define name="breadcrumb-titulo">
+                Início
+            </ui:define>
+            <ui:define name="breadcrumb-ativo">
+                Messages
+            </ui:define>
+            <ui:define name="content">
+                <h:form>
+                    <div class="col-sm-12">
+                        <br/>
+                        <h3>Messages</h3>
+                        <p:messages id="messages1" showDetail="true"  closable="true" />
+                        <p:messages id="messages2" showDetail="true"  closable="true" />
+                        <p:messages id="messages3" showDetail="true"  closable="true" />
+                        <p:messages id="messages4" showDetail="true"  closable="true" />
+                        <p:commandButton value="Info" action="#{testeMB.info()}" update="messages1" styleClass="btn btn-primary" />
+                        <p:commandButton value="Warn" action="#{testeMB.warn()}" update="messages2" styleClass="btn btn-warning" />
+                        <p:commandButton value="Error" action="#{testeMB.error()}" update="messages3" styleClass="btn btn-danger"/>
+                        <p:commandButton value="Fatal" action="#{testeMB.fatal()}" update="messages4" styleClass="btn btn-danger"  />
+                    </div>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

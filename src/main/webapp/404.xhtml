@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Template Gamora</title>
+        <meta name="robots" content="noindex, nofollow"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0"/>
+        <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700"/>-->
+        <h:outputStylesheet library="css"  name="custom.css" />
+        <h:outputStylesheet library="css"  name="themes/flat.min.css" />
+        <style type="text/css">  
+            @import url(#{facesContext.externalContext.request.contextPath}/resources/css/custom-icons/icons.css) ; 
+            #bdy {
+                background:  url(http://cssdeck.com/uploads/media/items/7/7AF2Qzt.png) !important;
+            }
+        </style> 
+        <h:outputScript library="js"  name="custom.js" />
+        <h:outputScript library="primefaces" name="jquery/jquery.js" target="head" />
+        <h:outputScript library="js" name="custom2.js" target="head" />
+    </h:head>
+    <h:body id="bdy" onload="initial('theme.css', 'css')">
+        <div class="content bg-white text-center pulldown overflow-hidden">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <!-- Error Titles -->
+                    <img src="resources/img/Gamora-Guardian.png" />
+                    <h1 class="font-s128 font-w300 text-flat animated flipInX">404</h1>
+                    <h2 class="h3 font-w300 push-50 animated fadeInUp">Desculpe nos mas esta página não pode ser encontrada..</h2>
+                    <!-- END Error Titles -->
+
+                    <!-- Search Form -->
+                    <form class="form-horizontal push-50" action="#" method="post">
+                        <div class="form-group">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="..."/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button">Go!</button>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                    <!-- END Search Form -->
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

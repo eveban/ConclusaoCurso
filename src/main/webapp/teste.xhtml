@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:decorate template="WEB-INF/template/LayoutPadrao.xhtml">
+
+	<ui:define name="titulo">DashBoard</ui:define>
+	<ui:define name="corpo">
+		<h:form>
+
+
+			<p:chart type="line" model="#{testeBean.temperatura}"
+				style="height:300px;" />
+			<!-- 			<p:commandButton value="Graficar!"
+				actionListener="#{testeBean.listar()}" update="panel"
+				process="@form" />
+
+			<h:panelGroup id="panel" layout="block">
+				
+				<p:chart type="pie" model="#{testeBean.pieModel}"
+					style="width:400px;height:300px"
+					rendered="#{testeBean.pieModel != null}" />
+			</h:panelGroup> -->
+		</h:form>
+	</ui:define>
+</ui:decorate>
+</html>

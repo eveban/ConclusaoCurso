@@ -1,0 +1,25 @@
+Copie para a raiz do projeto as pastas "fonts e resources";
+Copie os arquivos (Breadcrumb.xhtml, Footer.xhtml, Header.xhml, Navbar.xhtml, Template.xhtml) para a WEB-INF do Projeto. (Caso copie para outro lugar deve-se redirecionar os arquivos css e js)
+Apos copiar os arquivos basta somente criar Clientes de Modelos de Facelets referenciando o arquivo Template.xhtml.
+Nos modelos de facelets criados você tera as opções para usar.
+    <ui:define name="titulo">
+           Titulo da Pagina 
+    </ui:define>
+    <ui:define name="subtitulo">
+            Subtitulo
+    </ui:define>
+    <ui:define name="breadcrumb-titulo">
+            Breadcrumb Home
+    </ui:define>
+    
+    <ui:define name="breadcrumb-ativo">
+            Breadcrumb Ativo
+     </ui:define>
+
+     <ui:define name="content">
+        Conteudo da pagina, aqui você cria seus formulários.
+     </ui:define>
+
+Atenção todo o sistema responsivo é o mesmo sistema de grids do bootstrap, para dúvidas sobre larguras de colunas veja no site do bootstrap.
+Problemas com componentes do primefaces sobre o responsivo ou visual entrar em contato com o suporte.
+

@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/Template.xhtml">
+            <ui:define name="titulo">
+                Grid
+            </ui:define>
+            <ui:define name="subtitulo">
+
+            </ui:define>
+            <ui:define name="breadcrumb-titulo">
+                Início
+            </ui:define>
+            <ui:define name="breadcrumb-ativo">
+                Grid
+            </ui:define>
+            <ui:define name="content">
+                <div class="content">
+                    <!-- XS Grid -->
+                    <h2 class="content-heading">XS Grid <small>Always horizontal</small></h2>
+                    <div class="row text-center">
+                        <div class="col-xs-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-xs-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-xs-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-xs-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END XS Grid -->
+
+                    <!-- SM Grid -->
+                    <h2 class="content-heading">SM Grid <small>Collapsed at 768px</small></h2>
+                    <div class="row text-center">
+                        <div class="col-sm-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END SM Grid -->
+
+                    <!-- MD Grid -->
+                    <h2 class="content-heading">MD Grid <small>Collapsed at 992px</small></h2>
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-md-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-md-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-md-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END MD Grid -->
+
+                    <!-- LG Grid -->
+                    <h2 class="content-heading">LG Grid <small>Collapsed at 1200px</small></h2>
+                    <div class="row text-center">
+                        <div class="col-lg-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-lg-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-lg-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-lg-4</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END MD Grid -->
+
+                    <!-- Mixed Grid -->
+                    <h2 class="content-heading">Mixed Grid <small>For complex layouts</small></h2>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-6</code> <code>col-lg-3</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-6</code> <code>col-lg-3</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-6</code> <code>col-lg-3</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-6</code> <code>col-lg-3</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Mixed Grid -->
+
+                    <!-- Grid with Offsets -->
+                    <h2 class="content-heading">Grid with Offsets <small>For complex layouts</small></h2>
+                    <div class="row text-center">
+                        <div class="col-sm-3">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-3</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-sm-offset-6">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-3</code> <code> col-sm-offset-6</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4 col-md-offset-1">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-md-4</code> <code>col-md-offset-1</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-2">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-md-4</code> <code>col-md-offset-2</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p><code>col-sm-6</code> <code> col-sm-offset-3</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Grid with Offsets -->
+
+                    <!-- Content Grid -->
+                    <h2 class="content-heading">Content Grid <small>Useful for tiles/widgets</small></h2>
+                    <div class="content-grid">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <div class="block">
+                                    <div class="block-content">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Content Grid -->
+
+                    <!-- Blocks in Grid -->
+                    <h2 class="content-heading">Blocks in Grid</h2>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                            <p:panel header="Title">
+                                Content
+                            </p:panel>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <p:panel header="Title">
+                                Content
+                            </p:panel>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                           <p:panel header="Title">
+                                Content
+                            </p:panel>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <p:panel header="Title">
+                                Content
+                            </p:panel>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <p:panel header="Title">
+                                Content
+                            </p:panel>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <p:panel header="Title">
+                                Content
+                            </p:panel>
+                        </div>
+                    </div>
+                    <!-- END Blocks in Grid -->
+
+                    <!-- Paragraphs in Block -->
+                    <h2 class="content-heading">Paragraphs in Grid</h2>
+                    <div class="block">
+                        <div class="block-header">
+                            <h3 class="block-title">Paragraphs</h3>
+                        </div>
+                        <div class="block-content">
+                            <div class="row items-push">
+                                <div class="col-sm-6">
+                                    <h3 class="push-15">Flexible Grid</h3>
+                                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci et.</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3 class="push-15">Many Options</h3>
+                                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci et.</p>
+                                </div>
+                            </div>
+                            <div class="row items-push">
+                                <div class="col-sm-4">
+                                    <h3 class="push-15">For all screen sizes</h3>
+                                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci et.</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3 class="push-15">Easy to use</h3>
+                                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci et.</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3 class="push-15">Bootstrap Grid</h3>
+                                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci et.</p>
+                                </div>
+                            </div>
+                            <div class="row items-push">
+                                <div class="col-sm-4">
+                                    <h3 class="push-15">12 Columns</h3>
+                                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci et.</p>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h3 class="push-15">Multiple Layouts</h3>
+                                    <p>Felis ullamcorper curae erat nulla luctus sociosqu phasellus posuere habitasse sollicitudin, libero sit potenti leo ultricies etiam blandit id platea augue, erat habitant fermentum lorem commodo taciti tristique etiam curabitur suscipit lacinia habitasse amet mauris eu eget ipsum nec magna in, adipiscing risus aenean turpis proin duis fringilla praesent ornare lorem eros malesuada vitae nullam diam velit potenti consectetur, vehicula accumsan risus lectus tortor etiam facilisis tempus sapien tortor, mi vestibulum taciti dapibus viverra ac justo vivamus erat phasellus turpis nisi class praesent duis ligula, vel ornare faucibus potenti nibh turpis, at id semper nunc dui blandit. Enim et nec habitasse ultricies id tortor curabitur, consectetur eu inceptos ante conubia tempor platea odio, sed sem integer lacinia cras non risus euismod turpis platea erat ultrices iaculis rutrum taciti, fusce lobortis adipiscing dapibus habitant sodales gravida pulvinar, elementum mi tempus ut commodo congue ipsum justo nec dui cursus scelerisque elementum volutpat tellus nulla laoreet taciti, nibh suspendisse primis arcu integer vulputate etiam ligula lobortis nunc, interdum commodo libero aliquam suscipit phasellus sollicitudin arcu varius venenatis erat ornare tempor nullam donec vitae etiam tellus.</p>
+                                </div>
+                            </div>
+                            <div class="row items-push">
+                                <div class="col-sm-8">
+                                    <h3 class="push-15">Mobile, Tablets and Desktop</h3>
+                                    <p>Felis ullamcorper curae erat nulla luctus sociosqu phasellus posuere habitasse sollicitudin, libero sit potenti leo ultricies etiam blandit id platea augue, erat habitant fermentum lorem commodo taciti tristique etiam curabitur suscipit lacinia habitasse amet mauris eu eget ipsum nec magna in, adipiscing risus aenean turpis proin duis fringilla praesent ornare lorem eros malesuada vitae nullam diam velit potenti consectetur, vehicula accumsan risus lectus tortor etiam facilisis tempus sapien tortor, mi vestibulum taciti dapibus viverra ac justo vivamus erat phasellus turpis nisi class praesent duis ligula, vel ornare faucibus potenti nibh turpis, at id semper nunc dui blandit. Enim et nec habitasse ultricies id tortor curabitur, consectetur eu inceptos ante conubia tempor platea odio, sed sem integer lacinia cras non risus euismod turpis platea erat ultrices iaculis rutrum taciti, fusce lobortis adipiscing dapibus habitant sodales gravida pulvinar, elementum mi tempus ut commodo congue ipsum justo nec dui cursus scelerisque elementum volutpat tellus nulla laoreet taciti, nibh suspendisse primis arcu integer vulputate etiam ligula lobortis nunc, interdum commodo libero aliquam suscipit phasellus sollicitudin arcu varius venenatis erat ornare tempor nullam donec vitae etiam tellus.</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h3 class="push-15">Mixed Grid</h3>
+                                    <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci et.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Paragraphs in Block -->
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

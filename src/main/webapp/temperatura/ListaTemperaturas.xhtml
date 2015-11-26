@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:decorate template="../WEB-INF/Template.xhtml">
+	<f:metadata>
+
+	</f:metadata>
+	<ui:define name="titulo"></ui:define>
+	<ui:define name="subtitulo">Pesquisar por datas</ui:define>
+	<ui:define name="breadcrumb-titulo">
+               Home
+            </ui:define>
+	<ui:define name="breadcrumb-ativo">
+              Lista Temperaturas
+            </ui:define>
+	<ui:define name="content">
+		<h:form>
+			<p:panel>
+				<f:facet name="header">
+					Pesquisar temperaturas
+				</f:facet>
+				<p:panelGrid columns="5" id="painel"
+					style="margin-top: 5px;border-style:none;">
+					<p:column>
+						<p:outputLabel value="Data de criação" />
+					</p:column>
+
+					<p:calendar size="10" pattern="dd/MM/yyyy"
+						value="#{pesquisaTemperaturaBean.filtro.dataCriacaoDe}" />
+					a
+					<p:calendar size="10" pattern="dd/MM/yyyy"
+						value="#{pesquisaTemperaturaBean.filtro.dataCriacaoAte}" />
+					<p:commandButton value="Pesquisar"
+						action="#{pesquisaTemperaturaBean.pesquisar()}"
+						icon="ui-icon-search" ajax="true" update="@form" />
+
+				</p:panelGrid>
+			</p:panel>
+			<div class="col-sm-12">
+				<p:dataTable paginator="true" rows="5"
+					emptyMessage="Nenhuma informação encontrada."
+					value="#{pesquisaTemperaturaBean.filtrados}" var="temperatura"
+					id="tableTemp" rowsPerPageTemplate="5,10,15"
+					paginatorPosition="bottom" style="text-align:center;">
+					<f:facet name="header">
+						<h:outputText value="Temperatura" />
+					</f:facet>
+					<p:column headerText="Número"
+						style="text-align: center;width: 80px ">
+						<h:outputText value=" #{temperatura.id}" />
+					</p:column>
+					<p:column headerText="Data">
+						<h:outputText value="#{temperatura.data}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+					<p:column headerText="Hora">
+						<h:outputText value="#{temperatura.hora}">
+							<f:convertDateTime pattern="HH:mm:ss"
+								timeZone="#{initParam.timezone}" />
+						</h:outputText>
+					</p:column>
+					<p:column headerText="Medida">
+						<h:outputText value="#{temperatura.valor}" />
+					</p:column>
+				</p:dataTable>
+			</div>
+		</h:form>
+
+	</ui:define>
+</ui:decorate>
+
+</html>

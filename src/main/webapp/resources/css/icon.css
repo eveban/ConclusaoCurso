@@ -1,0 +1,134 @@
+@CHARSET "UTF-8";
+
+.iconcargo {
+	background-image: url("../resources/images/medical.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.pdf {
+	background-image: url("../resources/images/pdf.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.save {
+	background-image: url("../resources/images/save.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.add {
+	background-image: url("../resources/images/add.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.addperson {
+	background-image: url("../resources/images/addperson.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.searchperson {
+	background-image: url("../resources/images/searchperson.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.clock {
+	background-image: url("../resources/images/clock-add-icon.png")
+		!important;
+	width: 24px;
+	height: 24px;
+}
+
+.search {
+	background-image: url("../resources/images/Search-icon.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.send-mail {
+	background-image: url("../resources/images/send-mail.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.process-add {
+	background-image: url("../resources/images/process-add.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.addicon {
+	background-image: url("../resources/images/addicon.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.print {
+	background-image: url("../resources/images/print.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.logout {
+	background-image: url("../resources/images/Logout.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.admin {
+	background-image: url("../resources/images/admin.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.administrative {
+	background-image: url("../resources/images/administrative.png")
+		!important;
+	width: 24px;
+	height: 24px;
+}
+
+.new {
+	background-image: url("../resources/images/new.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.logotipo {
+	background-image: url("../resources/images/logotipo.png") !important;
+	width: 119px;
+	height: 35px;
+	opacity: 1 !important;
+}
+
+.logo {
+	background-color: #FFFFF;
+	background-image: url("../resources/images/portal_vagas.png") !important;
+	width: 150px;
+	height: 44px;
+	opacity: 1 !important;
+	background-image: url("../resources/images/portal_vagas.png") !important;
+}
+
+.cancel {
+	background-image: url("../resources/images/cancel.png") !important;
+	width: 24px;
+	height: 24px;
+}
+
+.medical_report {
+	background-image: url("../resources/images/medical-report-icon.png")
+		!important;
+	width: 24px;
+	height: 24px;
+}
+
+.ok {
+	background-image: url("../resources/images/ok.png") !important;
+	width: 24px;
+	height: 24px;
+}

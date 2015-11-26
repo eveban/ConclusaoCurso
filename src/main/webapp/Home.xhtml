@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="refresh" content="5" />
+</h:head>
+<ui:decorate template="WEB-INF/template/LayoutPadrao.xhtml">
+	<f:metadata>
+		<f:param name="dummy" />
+		<f:event listener="#{graficoTemperaturaBean.preRender()}"
+			type="preRenderView" />
+	</f:metadata>
+	<ui:define name="titulo">DashBoard</ui:define>
+	<ui:define name="corpo">
+		<p:chart type="line" model="#{graficoTemperaturaBean.model}"
+			style="height: 300px" />
+	</ui:define>
+</ui:decorate>
+</html>

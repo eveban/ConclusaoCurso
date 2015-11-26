@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>.:: Login ::..</title>
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+	<!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700"/>-->
+	<h:outputStylesheet library="css" name="custom.css" />
+	<h:outputStylesheet library="css" name="themes/flat.min.css" />
+
+	<style type="text/css">
+@import
+	url(#{facesContext.externalContext.request.contextPath}/resources/css/custom-icons/icons.css)
+	;
+
+#bdy {
+	background: url(http://cssdeck.com/uploads/media/items/7/7AF2Qzt.png)
+		!important;
+}
+</style>
+	<h:outputScript library="js" name="custom.js" />
+	<h:outputScript library="primefaces" name="jquery/jquery.js"
+		target="head" />
+	<h:outputScript library="js" name="custom2.js" target="head" />
+</h:head>
+<h:body id="bdy" onload="initial('theme.css', 'css')">
+	<f:metadata>
+		<f:event listener="#{loginBean.preRender()}" type="preRenderView" />
+	</f:metadata>
+
+	<div class="content overflow-hidden">
+		<div class="row">
+			<div
+				class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+				<!-- Login Block -->
+				<div class="block block-themed animated fadeIn">
+					<div class="block-header bg-primary">
+						<ul class="block-options">
+							<li><a href="#">Esqueceu a senha?</a></li>
+						</ul>
+						<h3 class="block-title">Login</h3>
+					</div>
+					<div class="block-content block-content-full block-content-narrow">
+						<!-- Login Title -->
+						<h1 class="h2 font-w600 push-30-t push-5">EEP</h1>
+						<p>Bem Vindo, faça o login.</p>
+
+						<h:form id="frm" prependId="false"
+							class="form-horizontal push-30-t push-50">
+							<p:messages id="messages" autoUpdate="true" closable="true" />
+							<div class="form-group">
+								<p:outputLabel value="Usuário" />
+								<div class="col-xs-12">
+									<div class="form-material form-material-primary floating">
+										<p:inputText id="j_username" value="#{loginBean.usuario}" />
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<p:outputLabel value="Senha" />
+								<div class="col-xs-12">
+									<div class="form-material form-material-primary floating">
+										<p:inputText type="password" id="j_password" />
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-12">
+									<p:selectBooleanCheckbox value="_spring_security_remember_me" />
+									&nbsp;
+									<p:outputLabel value="Lembrar-me?" />
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-12 col-sm-6 col-md-4">
+									<p:commandButton styleClass="btn btn-block btn-primary"
+										action="#{loginBean.login()}" ajax="false" value="Entrar" />
+								</div>
+							</div>
+						</h:form>
+						<!-- END Login Form -->
+					</div>
+				</div>
+				<!-- END Login Block -->
+			</div>
+		</div>
+	</div>
+</h:body>
+</html>
+

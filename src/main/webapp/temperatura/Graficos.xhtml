@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:decorate template="../WEB-INF/Template.xhtml">
+	<f:metadata>
+		<f:param name="dummy" />
+		<f:event listener="#{pesquisaGraficoBean.preRender()}"
+			type="preRenderView" />
+	</f:metadata>
+	<ui:define name="titulo"></ui:define>
+	<ui:define name="subtitulo">Pesquisar por datas</ui:define>
+	<ui:define name="breadcrumb-titulo">
+               Home
+            </ui:define>
+	<ui:define name="breadcrumb-ativo">
+              ListaTemperaturas
+            </ui:define>
+	<ui:define name="content">
+		<h:form>
+			<p:panel>
+				<f:facet name="header">
+					Pesquisar temperaturas
+				</f:facet>
+				<h:panelGrid columns="3" id="painel"
+					style="width: 50%; margin-top: 10px" columnClasses="rotulo, campo">
+					<p:column>
+						<p:outputLabel value="Data de criação" />
+					</p:column>
+
+					<p:calendar size="10" pattern="dd/MM/yyyy"
+						value="#{pesquisaGraficoBean.filtro.data}" />
+
+					<p:commandButton value="Pesquisar"
+						action="#{pesquisaGraficoBean.pesquisar()}" icon="ui-icon-search"
+						ajax="true" update="chart" styleClass="btn btn-primary" style="margin-left: 5px"/>
+
+				</h:panelGrid>
+			</p:panel>
+			<div class="col-sm-12">
+				<div class="row">
+					<p:chart type="line" model="#{pesquisaGraficoBean.model}"
+						id="chart">
+					</p:chart>
+
+				</div>
+			</div>
+		</h:form>
+
+	</ui:define>
+</ui:decorate>
+
+</html>

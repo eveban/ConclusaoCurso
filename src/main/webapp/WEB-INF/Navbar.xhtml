@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<nav id="sidebar"> <!-- Sidebar Scroll Container -->
+<div id="sidebar-scroll">
+	<!-- Sidebar Content -->
+	<!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+	<div class="sidebar-content">
+		<!-- Side Header -->
+		<div class="side-header side-content bg-white-op">
+			<!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+			<button class="btn btn-link text-gray pull-right hidden-md hidden-lg"
+				type="button" data-toggle="layout" data-action="sidebar_close">
+				<i class="fa fa-times"></i>
+			</button>
+			<!-- Themes functionality initialized in App() -> uiHandleTheme() -->
+			<a class="h5 text-white" href="#"> <span
+				class=" text-primary h4 font-w600">EEP</span> <span
+				class="h4 font-w600 sidebar-mini-hide">Conclusão</span>
+			</a>
+		</div>
+		<!-- END Side Header -->
+
+		<!-- Side Content -->
+		<div class="side-content">
+			<ul class="nav-main">
+				<li><a class="active"
+					href="#{facesContext.externalContext.request.contextPath}/RealTime.jsf"><i
+						class="fa fa-home"></i><span class="sidebar-mini-hide">Tempo
+							Real</span></a></li>
+				<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
+						class="fa fa-line-chart"></i><span class="sidebar-mini-hide">Pesquisas</span></a>
+					<ul>
+						<li><a class="fa fa-line-chart"
+							href="#{facesContext.externalContext.request.contextPath}/temperatura/Graficos.jsf">
+								Gráficos</a></li>
+						<li><a class="fa fa-search"
+							href="#{facesContext.externalContext.request.contextPath}/temperatura/ListaTemperaturas.jsf">
+								Temperaturas</a></li>
+					</ul></li>
+				<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
+						class="fa fa-user"></i><span class="sidebar-mini-hide">Usuários</span></a>
+					<ul>
+						<li><a class="fa fa-plus"
+							href="#{facesContext.externalContext.request.contextPath}/admin/CadastraUsuarios.jsf">
+								Cadastrar</a></li>
+						<li><a class="fa fa-search"
+							href="#{facesContext.externalContext.request.contextPath}/admin/PesquisaUsuarios.jsf">
+								Pesquisar</a></li>
+					</ul></li>
+				<li><a class="nav-submenu" data-toggle="nav-submenu" href="#"><i
+						class="fa fa-users"></i><span class="sidebar-mini-hide">Grupos</span></a>
+					<ul>
+						<li><a class="fa fa-plus"
+							href="#{facesContext.externalContext.request.contextPath}/admin/CadastraGrupos.jsf">
+								Cadastrar</a></li>
+						<li><a class="fa fa-search"
+							href="#{facesContext.externalContext.request.contextPath}/admin/PesquisaGrupos.jsf">
+								Pesquisar</a></li>
+					</ul></li>
+
+			</ul>
+		</div>
+		<!-- END Side Content -->
+	</div>
+	<!-- Sidebar Content -->
+</div>
+<!-- END Sidebar Scroll Container --> </nav>
+</html>
+

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Ciência da Computação</title>
+	<meta name="viewport"
+		content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+	<link rel="stylesheet"
+		href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700" />
+	<h:outputStylesheet library="css" name="custom.css" />
+	<h:outputStylesheet library="css" name="themes/flat.min.css" />
+	<h:outputStylesheet library="css" name="sistema.css" />
+	<h:outputStylesheet library="css" name="icon.css" />
+	<h:outputScript target="body" name="enterKeyTab.js" library="js" />
+
+	<style type="text/css">
+@import
+	url(#{facesContext.externalContext.request.contextPath}/resources/css/custom-icons/icons.css)
+	;
+</style>
+	<h:outputScript library="js" name="custom.js" />
+	<h:outputScript library="primefaces" name="jquery/jquery.js"
+		target="head" />
+	<h:outputScript library="js" name="custom2.js" target="head" />
+	<h:outputScript library="js" name="phoneMaskHandler.js" />
+	<h:outputScript library="js" name="jquery.maskMoney.js" />
+</h:head>
+
+<h:body onload="initial('theme.css', 'css')">
+	<p:inputText rendered="false" />
+	<div id="page-container"
+		class="sidebar-l sidebar-o side-scroll header-navbar-fixed sidebar-mini">
+
+
+		<!-- Sidebar -->
+		<ui:include src="Navbar.xhtml" />
+		<!-- END Sidebar -->
+
+		<!-- Header -->
+		<ui:include src="Header.xhtml" />
+		<!-- END Header -->
+
+		<!-- Main Container -->
+		<main id="main-container"> <!-- Page Header --> <ui:include
+			src="Breadcrumb.xhtml" /> <!-- END Page Header --> <!-- Page Content -->
+		<div class="content">
+			<div class="row">
+				<ui:insert name="content">
+
+				</ui:insert>
+			</div>
+
+		</div>
+		</main>
+
+		<!-- Footer -->
+		<ui:include src="Footer.xhtml" />
+		<!-- END Footer -->
+	</div>
+	<!-- END Page Container -->
+</h:body>
+
+</html>

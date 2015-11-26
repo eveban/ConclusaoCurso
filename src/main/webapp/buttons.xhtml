@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./WEB-INF/Template.xhtml">
+            <ui:define name="titulo">
+                Buttons
+            </ui:define>
+            <ui:define name="subtitulo">
+
+            </ui:define>
+            <ui:define name="breadcrumb-titulo">
+                Início
+            </ui:define>
+            <ui:define name="breadcrumb-ativo">
+                Buttons
+            </ui:define>
+            <ui:define name="content">
+                <h:form>
+                    
+                    <div class="col-sm-12">
+                        <h5>Normal</h5>
+                        <p:commandButton value="Default" styleClass="disabled" />
+                        <p:commandButton value="Primary" styleClass="btn btn-primary" />
+                        <p:commandButton value="Danger" styleClass="btn btn-danger" />
+                        <p:commandButton value="Warning" styleClass="btn btn-warning" />
+                        <p:commandButton value="Success" styleClass="btn btn-success" />
+                        <p:commandButton value="Info" styleClass="btn btn-info" />
+                        <hr/>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                        <h5>Square</h5>
+                        <p:commandButton value="Disabled" styleClass="disabled btn-square" disabled="true" />
+                        <p:commandButton value="Primary" styleClass="btn btn-primary  btn-square" />
+                        <p:commandButton value="Danger" styleClass="btn btn-danger btn-square" />
+                        <p:commandButton value="Warning" styleClass="btn btn-warning btn-square" />
+                        <p:commandButton value="Success" styleClass="btn btn-success btn-square" />
+                        <p:commandButton value="Info" styleClass="btn btn-info btn-square" />
+                        <hr/>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5>Rounded</h5>
+                        <p:commandButton value="Disabled" styleClass="disabled btn-rounded" disabled="true" />
+                        <p:commandButton value="Primary" styleClass="btn btn-primary  btn-rounded"  />
+                        <p:commandButton value="Danger" styleClass="btn btn-danger btn-rounded" />
+                        <p:commandButton value="Warning" styleClass="btn btn-warning btn-rounded" />
+                        <p:commandButton value="Success" styleClass="btn btn-success btn-rounded" />
+                        <p:commandButton value="Info" styleClass="btn btn-info btn-rounded" />
+                        <hr/>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                        <h5>Mini</h5>
+                        <p:commandButton value="Disabled" styleClass="disabled btn-xs" disabled="true" />
+                        <p:commandButton value="Primary" styleClass="btn btn-primary  btn-xs" />
+                        <p:commandButton value="Danger" styleClass="btn btn-danger btn-xs" />
+                        <p:commandButton value="Warning" styleClass="btn btn-warning btn-xs" />
+                        <p:commandButton value="Success" styleClass="btn btn-success btn-xs" />
+                        <p:commandButton value="Info" styleClass="btn btn-info btn-xs" />
+                        <hr/>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5>Small</h5>
+                        <p:commandButton value="Disabled" styleClass="disabled btn-sm" disabled="true" />
+                        <p:commandButton value="Primary" styleClass="btn btn-primary  btn-sm" />
+                        <p:commandButton value="Danger" styleClass="btn btn-danger btn-sm" />
+                        <p:commandButton value="Warning" styleClass="btn btn-warning btn-sm" />
+                        <p:commandButton value="Success" styleClass="btn btn-success btn-sm" />
+                        <p:commandButton value="Info" styleClass="btn btn-info btn-sm" />
+                        <hr/>
+                    </div>
+                    <div class="col-sm-12">
+                        <h5>Large</h5>
+                        <p:commandButton value="Disabled" styleClass="disabled btn-lg" disabled="true" />
+                        <p:commandButton value="Primary" styleClass="btn btn-primary  btn-lg" />
+                        <p:commandButton value="Danger" styleClass="btn btn-danger btn-lg" />
+                        <p:commandButton value="Warning" styleClass="btn btn-warning btn-lg" />
+                        <p:commandButton value="Success" styleClass="btn btn-success btn-lg" />
+                        <p:commandButton value="Info" styleClass="btn btn-info btn-lg" />
+                        <hr/>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                        <h5>Block</h5>
+                        <p:commandButton value="Block" styleClass="btn btn-primary btn-block" />
+                    </div>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

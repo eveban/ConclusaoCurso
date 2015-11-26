@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:body>
+	<ui:composition template="./WEB-INF/Template.xhtml">
+		<ui:define name="titulo">
+                Formulários
+            </ui:define>
+		<ui:define name="subtitulo">
+                Modelos
+            </ui:define>
+		<ui:define name="breadcrumb-titulo">
+                Início
+            </ui:define>
+		<ui:define name="breadcrumb-ativo">
+                Formulário
+            </ui:define>
+
+		<ui:define name="content">
+			<f:metadata>
+				<!-- Campo para Editar os produto, pegando o id do produto como parametro OmniFaces.org (Será necessário conversor)-->
+				<o:viewParam name="usuario" value="#{usuarioBean.usuario}" />
+				<f:param name="dummy" />
+				<f:event listener="#{usuarioBean.inicializar()}"
+					type="preRenderView" />
+			</f:metadata>
+			<h:form>
+				<p:panel closeTitle="Fechar" header="Cadastro de Usuários">
+					<div class="row">
+						<div class="col-xs-12">
+							<p:messages closable="true" autoUpdate="true" />
+							<p:commandButton styleClass="btn btn-primary" value="Novo"
+								icon="Adicionar" />
+							<p:commandButton styleClass="btn btn-info" value="Consultar"
+								icon="Consultar" />
+							<p:commandButton styleClass="btn btn-success" value="Salvar"
+								icon="Salvar" update="@form" action="#{usuarioBean.salvar}" />
+						</div>
+						<div class="col-xs-12">
+							<hr />
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+							<p:outputLabel for="nome" value="Nome" />
+							<p:inputText id="nome" placeholder="Digite o nome"
+								required="true" value="#{usuarioBean.usuario.nome}" />
+						</div>
+
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+							<p:outputLabel for="usuario" value="Usuário" />
+							<p:inputText id="usuario" placeholder="Digite seu usuário"
+								required="true" value="#{usuarioBean.usuario.usuario}" />
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 ">
+							<p:outputLabel value="Senha" for="senha" />
+							<p:password id="senha" feedback="true"
+								promptLabel="Informe a senha" weakLabel="Fraca" goodLabel="Boa"
+								strongLabel="Forte" value="#{usuarioBean.usuario.senha}"
+								match="confirmaSenha" />
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 ">
+							<p:outputLabel value="Confirma Senha" for="confirmaSenha" />
+							<p:password id="confirmaSenha" promptLabel="Confirme a senha" />
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 ">
+							<p:outputLabel for="dtCadastro" value="Data Cadastro" />
+							<p:calendar id="dtCadastro" disabled="true" />
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+							<p:outputLabel for="email" value="Email" />
+							<p:inputText id="email" value="#{usuarioBean.usuario.email}" />
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+							<p:outputLabel value="Contato" />
+							<p:inputText />
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 ">
+							<p:outputLabel for="dtNascimento" value="Data Nascimento" />
+							<p:calendar id="dtNascimento" mask="99/99/9999"
+								pattern="dd/MM/yyyy" showButtonPanel="true" />
+						</div>
+
+						<div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 ">
+							<h:panelGrid columns="2" styleClass="sem-borda"
+								style="margin-top: 20px" columnClasses="rotulo, campo">
+								<p:selectOneMenu style="width: 180px"
+									value="#{usuarioBean.novoGrupo}">
+									<f:selectItem itemLabel="Selecione..." />
+									<f:selectItems value="#{usuarioBean.grupos}" var="grupo"
+										itemLabel="#{grupo.descricao}" itemValue="#{grupo}" />
+								</p:selectOneMenu>
+
+								<p:commandButton styleClass="btn btn-primary"
+									value="Adicionar Grupo" action="#{usuarioBean.adicionarGrupo}"
+									update="tabelaGrupos" />
+
+							</h:panelGrid>
+						</div>
+
+						<div class="col-sm-12">
+							<hr />
+							<p:dataTable paginator="true" rows="5" id="tabelaGrupos"
+								value="#{usuarioBean.usuario.grupos}" var="grupo"
+								paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								rowsPerPageTemplate="5,10,15" paginatorPosition="bottom">
+								<f:facet name="header">
+                                Permissões
+                            </f:facet>
+								<p:column headerText="Grupo">
+									<h:outputText value="#{grupo.nome}" />
+								</p:column>
+								<p:column headerText="Descrição">
+									<h:outputText value="#{grupo.descricao}" />
+								</p:column>
+
+								<p:column style="text-align: center; width: 70px"
+									headerText="Ações">
+									<p:commandButton icon="ui-icon-trash" title="Excluir" />
+								</p:column>
+							</p:dataTable>
+						</div>
+
+					</div>
+				</p:panel>
+			</h:form>
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

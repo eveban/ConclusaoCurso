@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<div class="content bg-gray-lighter">
+	<div class="row items-push">
+		<div class="col-sm-7">
+			<h1 class="page-heading">
+				<ui:insert name="titulo">
+                        Title
+                    </ui:insert>
+				<small> <ui:insert name="subtitulo">
+                            Subtítulo
+                        </ui:insert>
+				</small>
+			</h1>
+		</div>
+		<div class="col-sm-5 text-right hidden-xs">
+			<ol class="breadcrumb push-10-t">
+				.
+				<li><ui:insert name="breadcrumb-titulo">
+                            Category
+                        </ui:insert></li>
+				<li><a class="link-effect" href=""> <ui:insert
+							name="breadcrumb-ativo">
+                                Page
+                            </ui:insert>
+				</a></li>
+			</ol>
+		</div>
+	</div>
+</div>
+</html>
+

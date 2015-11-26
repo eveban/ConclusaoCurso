@@ -1,0 +1,33 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<beans:bean id="appUserDetailsService" class="br.com.tcc.security.AppUserDetailsService" />
+
+	<http pattern="/Login.jsf" security="none" />
+	<http pattern="/Erro.jsf" security="none" />
+	<http pattern="/RealTime.jsf" security="none" />
+	<http pattern="/javax.faces.resource/**" security="none" />
+
+	<http auto-config="false" use-expressions="true">
+		<intercept-url pattern="/index.jsf" access="isAuthenticated()" />
+		<intercept-url pattern="/Home.jsf" access="isAuthenticated()" />
+		<intercept-url pattern="/**" access="hasAnyRole('ADMINISTRADORES')" />
+		<intercept-url pattern="/admin/**" access="hasAnyRole('ADMINISTRADORES')" />
+
+		<form-login login-page="/Login.jsf" default-target-url="/RealTime.jsf"
+			always-use-default-target="true" authentication-failure-url="/Login.jsf?invalid=true" />
+
+		<logout logout-url="/j_spring_security_logout"
+			invalidate-session="true" />
+		<remember-me />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="appUserDetailsService" />
+
+	</authentication-manager>
+</beans:beans>
