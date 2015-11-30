@@ -23,7 +23,7 @@ import br.com.tcc.repository.MedidaRepository;
 @RequestScoped
 public class GraficoTemperaturaBean {
 
-	private static DateFormat DATE_FORMAT = new SimpleDateFormat("HH");
+	private static DateFormat DATE_FORMAT = new SimpleDateFormat("HH:mm");
 	private List<Medida> listaTemperaturas;
 	private List<Integer> list;
 	private Medida medida;
@@ -46,18 +46,18 @@ public class GraficoTemperaturaBean {
 		this.model.setShowPointLabels(true);
 		this.model.getAxes().put(AxisType.X, new CategoryAxis("Horários"));
 		Axis yAxis = model.getAxis(AxisType.Y);
-		//Axis xAxis = model.getAxis(AxisType.X);
+		// Axis xAxis = model.getAxis(AxisType.X);
 		yAxis.setMin(-40);
 		yAxis.setMax(40);
 		yAxis.setTickCount(17);
-		//xAxis.setTickAngle(90);
+		// xAxis.setTickAngle(90);
 		adicionarSerie("Temperatura");
 		// maxValorMes();
 	}
 
 	private void adicionarSerie(String rotulo) {
 		ChartSeries series = new ChartSeries(rotulo);
-		List<Medida> lista = medidaRepository.porData();
+		List<Medida> lista = medidaRepository.dataAtual();
 		for (Medida medida : lista) {
 			series.set(DATE_FORMAT.format(medida.getHora()), medida.getValor());
 		}
